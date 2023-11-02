@@ -11,5 +11,6 @@
         public string SurfaceMaterial { get; set; }
         public int RushOrder { get; set; }
         public double Cost { get; set; }
+        public DateTime Date { get; set; }
     }
 }
