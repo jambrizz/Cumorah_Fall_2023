@@ -1,0 +1,84 @@
+﻿@page
+@model Mega_Desk_2._0.Pages.view.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].lastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].Width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].Depth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].Drawers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].SurfaceMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].RushOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MegaDesk[0].Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MegaDesk) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Depth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Drawers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurfaceMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RushOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
