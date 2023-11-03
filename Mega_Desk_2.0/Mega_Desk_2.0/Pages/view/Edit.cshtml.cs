@@ -35,6 +35,8 @@ namespace Mega_Desk_2._0.Pages.view
             {
                 return NotFound();
             }
+            MegaDesk.Cost = MegaDesk.CalculateCost();
+            MegaDesk.Date = DateTime.Now;
             MegaDesk = megadesk;
             return Page();
         }

@@ -16,48 +16,60 @@
             <input type="hidden" asp-for="MegaDesk.ID" />
             <div class="form-group">
                 <label asp-for="MegaDesk.firstName" class="control-label"></label>
-                <input asp-for="MegaDesk.firstName" class="form-control" />
+                <input asp-for="MegaDesk.firstName" class="form-control" maxlength="20" />
                 <span asp-validation-for="MegaDesk.firstName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.lastName" class="control-label"></label>
-                <input asp-for="MegaDesk.lastName" class="form-control" />
+                <input asp-for="MegaDesk.lastName" class="form-control" maxlength="30" />
                 <span asp-validation-for="MegaDesk.lastName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.Width" class="control-label"></label>
-                <input asp-for="MegaDesk.Width" class="form-control" />
+                <input asp-for="MegaDesk.Width" class="form-control" min="24" max="96" />
                 <span asp-validation-for="MegaDesk.Width" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.Depth" class="control-label"></label>
-                <input asp-for="MegaDesk.Depth" class="form-control" />
+                <input asp-for="MegaDesk.Depth" class="form-control" min="12" max="48" />
                 <span asp-validation-for="MegaDesk.Depth" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.Drawers" class="control-label"></label>
-                <input asp-for="MegaDesk.Drawers" class="form-control" />
+                <select asp-for="MegaDesk.Drawers" class="form-control">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
                 <span asp-validation-for="MegaDesk.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.SurfaceMaterial" class="control-label"></label>
-                <input asp-for="MegaDesk.SurfaceMaterial" class="form-control" />
+                <select asp-for="MegaDesk.SurfaceMaterial" class="form-control">
+                    <option value="">Select</option>
+                    <option value="Oak">Oak</option>
+                    <option value="Laminate">Laminate</option>
+                    <option value="Pine">Pine</option>
+                    <option value="Rosewood">Rosewood</option>
+                    <option value="Veneer">Veneer</option>
+                </select>
                 <span asp-validation-for="MegaDesk.SurfaceMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.RushOrder" class="control-label"></label>
-                <input asp-for="MegaDesk.RushOrder" class="form-control" />
+                <select asp-for="MegaDesk.RushOrder" class="form-control">
+                    <option value="">Select</option>
+                    <option value="3">3 Days</option>
+                    <option value="5">5 Days</option>
+                    <option value="7">7 Days</option>
+                    <option value="14">14 Days</option>
+                </select>
                 <span asp-validation-for="MegaDesk.RushOrder" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MegaDesk.Cost" class="control-label"></label>
-                <input asp-for="MegaDesk.Cost" class="form-control" />
-                <span asp-validation-for="MegaDesk.Cost" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MegaDesk.Date" class="control-label"></label>
-                <input asp-for="MegaDesk.Date" class="form-control" />
-                <span asp-validation-for="MegaDesk.Date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
