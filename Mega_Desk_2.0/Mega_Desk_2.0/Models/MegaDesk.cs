@@ -11,20 +11,33 @@
         public string SurfaceMaterial { get; set; }
         public int RushOrder { get; set; }
         public double Cost { get; set; }
-        //TODO: make this automatically set to the current date
+        
         public DateTime Date { get; set; }
 
         public double CalculateCost()
         {
             double Cost = 0;
             double baseCost = 200;
-            double surfaceArea = Width * Depth;
-            double drawerCost = Drawers * 50;
+            double surfaceArea = CalculateSurfaceArea();
+            double drawerCost = CalculateDrawerCost();
             double surfaceMaterialCost = CalculateSurfaceMaterialCost();
             double rushCost = CalculateRush();
             double subtotal = baseCost + surfaceArea + drawerCost + surfaceMaterialCost + rushCost;
             Cost = subtotal;
             return Cost;
+        }
+
+        private double CalculateSurfaceArea()
+        {
+            double squareInPrice = 1.00;
+            double surfaceArea = (Width * Depth) * squareInPrice;
+            return surfaceArea;
+        }
+
+        private double CalculateDrawerCost()
+        {
+            double drawerCost = Drawers * 50.00;
+            return drawerCost;
         }
 
         private double CalculateSurfaceMaterialCost()
