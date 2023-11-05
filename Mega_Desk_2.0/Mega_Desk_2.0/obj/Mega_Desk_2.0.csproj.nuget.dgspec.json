@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BYUI\\fall2023\\networking in C#\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj": {}
+    "C:\\Users\\ambri\\OneDrive\\Documents\\BYU-I\\Cumorah_Fall_2023\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj": {}
   },
   "projects": {
-    "C:\\BYUI\\fall2023\\networking in C#\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj": {
+    "C:\\Users\\ambri\\OneDrive\\Documents\\BYU-I\\Cumorah_Fall_2023\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BYUI\\fall2023\\networking in C#\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj",
+        "projectUniqueName": "C:\\Users\\ambri\\OneDrive\\Documents\\BYU-I\\Cumorah_Fall_2023\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj",
         "projectName": "Mega_Desk_2.0",
-        "projectPath": "C:\\BYUI\\fall2023\\networking in C#\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj",
-        "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-        "outputPath": "C:\\BYUI\\fall2023\\networking in C#\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0\\obj\\",
+        "projectPath": "C:\\Users\\ambri\\OneDrive\\Documents\\BYU-I\\Cumorah_Fall_2023\\Mega_Desk_2.0\\Mega_Desk_2.0\\Mega_Desk_2.0.csproj",
+        "packagesPath": "C:\\Users\\ambri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ambri\\OneDrive\\Documents\\BYU-I\\Cumorah_Fall_2023\\Mega_Desk_2.0\\Mega_Desk_2.0\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ambri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

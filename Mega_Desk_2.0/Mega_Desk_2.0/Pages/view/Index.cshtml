@@ -10,6 +10,18 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form>
+    <p>
+        <h4>Search</h4>
+        <select asp-for="sortMethod">
+            <option value="date" selected>Order Date</option>
+            <option value="customer">Customer Name</option>
+        </select>
+        <label>first name: <input type="text" name="SearchString" /></label>
+        <label>last name: <input type="text" name="SearchString2" /></label>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -65,10 +77,10 @@
                 @Html.DisplayFor(modelItem => item.SurfaceMaterial)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RushOrder)
+                @Html.DisplayFor(modelItem => item.RushOrder) Days
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cost)
+                $ @Html.DisplayFor(modelItem => item.Cost)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)

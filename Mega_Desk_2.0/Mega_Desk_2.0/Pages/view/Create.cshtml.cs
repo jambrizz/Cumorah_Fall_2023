@@ -42,5 +42,10 @@ namespace Mega_Desk_2._0.Pages.view
 
             return RedirectToPage("./Index");
         }
+
+        public async void OnChangeSurfaceMaterial(object sender, EventArgs e)
+        { 
+            Console.WriteLine(MegaDesk.SurfaceMaterial);
+        }
     }
 }

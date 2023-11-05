@@ -35,8 +35,20 @@ namespace Mega_Desk_2._0.Pages.view
             {
                 return NotFound();
             }
-            MegaDesk.Cost = MegaDesk.CalculateCost();
-            MegaDesk.Date = DateTime.Now;
+            MegaDesk m = new MegaDesk();
+            m.ID = megadesk.ID;
+            m.firstName = megadesk.firstName;
+            m.lastName = megadesk.lastName;
+            m.Width = megadesk.Width;
+            m.Depth = megadesk.Depth;
+            m.Drawers = megadesk.Drawers;
+            m.SurfaceMaterial = megadesk.SurfaceMaterial;
+            m.RushOrder = megadesk.RushOrder;
+            
+
+            //m.Cost = m.CalculateCost();
+            //m.Date = DateTime.Now;
+            //MegaDesk = m;
             MegaDesk = megadesk;
             return Page();
         }
@@ -54,6 +66,8 @@ namespace Mega_Desk_2._0.Pages.view
 
             try
             {
+                MegaDesk.Cost = MegaDesk.CalculateCost();
+                MegaDesk.Date = DateTime.Now;
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)

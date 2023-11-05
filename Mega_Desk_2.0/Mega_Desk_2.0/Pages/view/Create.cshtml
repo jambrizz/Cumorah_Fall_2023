@@ -11,6 +11,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+        <img class="material" id="material" src="~/images/Oak.jpg" />
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -49,14 +50,20 @@
             </div>
             <div class="form-group">
                 <label asp-for="MegaDesk.SurfaceMaterial" class="control-label"></label>
-                <select asp-for="MegaDesk.SurfaceMaterial" class="form-control">
-                    <option value="">Select</option>
-                    <option value="Oak">Oak</option>
+                <select asp-for="MegaDesk.SurfaceMaterial" class="form-control" >
+                    <option value="Oak" selected>Oak</option>
                     <option value="Laminate">Laminate</option>
                     <option value="Pine">Pine</option>
                     <option value="Rosewood">Rosewood</option>
                     <option value="Veneer">Veneer</option>
                 </select>
+                <script>
+                    var material = document.getElementById("material");
+                    var materialList = document.getElementById("MegaDesk_SurfaceMaterial");
+                    materialList.addEventListener("change", function () {
+                        material.src = "/images/" + this.value + ".jpg";
+                    });
+                </script>
                 <span asp-validation-for="MegaDesk.SurfaceMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
